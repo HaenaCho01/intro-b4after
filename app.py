@@ -9,6 +9,26 @@ db = client.dbsparta
 def home():
    return render_template('index.html')
 
+@app.route('/lsspage')
+def lsspage():
+    return render_template('lss_intro.html')
+
+@app.route('/kbypage')
+def kbypage():
+    return render_template('kby_intro.html')
+
+@app.route('/chnpage')
+def chnpage():
+    return render_template('chn_intro.html')
+
+@app.route('/psypage')
+def psypage():
+    return render_template('psy_intro.html')
+
+@app.route('/jhjpage')
+def jhjpage():
+    return render_template('jhj_intro.html')
+
 @app.route("/reply", methods=["POST"])
 def guestbook_post():
     reply_receive = request.form['reply_give']
