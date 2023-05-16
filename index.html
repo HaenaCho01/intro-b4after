@@ -48,12 +48,22 @@
         justify-content: center;
     }
 
+    .titlein {
+        font-weight: 600;
+        font-size: 60px;
+        text-shadow: 2px 2px 2px 2px, black;
+    }
+
     .team {
         width: 50%;
         height: 200px;
         float: left;
         padding: 0px 0px 0px 200px;
         margin-top: 50px
+    }
+
+    .team-n {
+        font-weight: 550;
     }
 
     .team-i {
@@ -167,12 +177,12 @@
 
 <body>
     <div class="title">
-        <h1>Who is B4애프터?</h1>
+        <h1 class="titlein">Who is B4애프터?</h1>
     </div>
     <div class="b4after">
         <div class="b4after">
             <div class="team">
-                <h2>"B4애프터"</h2>
+                <h2 class="team-n">"B4애프터"</h2>
                 <br>
                 <p class="team-i">팀명</p>
                 <p>B4애프터</p>
@@ -233,7 +243,7 @@
             </div>
             </div>
     <div class="reply">
-        <h2>응원 댓글</h2>
+        <h2 class="team-n">응원 댓글</h2>
         <br>
         <input class="input" id="reply" placeholder="응원의 한마디!" style="float:left">
         <button onclick="save_reply()" class="btn">등록</button>
