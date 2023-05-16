@@ -41,7 +41,7 @@
 
         .image {
             width: 50%;
-            height: 600px;
+            height: 400px;
             float: left;
             margin: 20px auto 50px auto;
             padding: 20px 50px 20px 50px;
@@ -57,16 +57,16 @@
 
         .intro1 {
             width: auto;
-            height: 600px;
+            height: 400px;
             margin: 20px auto 50px auto;
             padding: 50px 100px 50px 100px;
         }
 
         .intro2 {
             width: auto;
-            height: 350px;
-            margin: 20px auto 50px auto;
-            padding: 50px 100px 50px 100px;
+            height: 300px;
+            margin: 10px auto 10px auto;
+            padding: 10px 100px 50px 100px;
         }
 
         .introtext {
@@ -76,9 +76,16 @@
         .home {
             color: gray;
             text-align: right;
-            margin: 50px 50px 50px auto;
+            margin: 10px 50px auto auto;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            $('#home').click(function () {
+                window.location.href='/'
+            })
+        });
+    </script>
 </head>
 
 <body>
@@ -121,7 +128,7 @@
         </div>
     </div>
     <div class="home">
-        <h3><a href="main url 삽입예정">☜ Who is B4애프터</a></h3>
+        <h3><a href="#" id="home" target="_self">☜ Who is B4애프터</a></h3>
     </div>
 </body>
 
