@@ -79,11 +79,18 @@
             margin: 50px 50px 50px auto;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            $('#home').click(function () {
+                window.location.href='/'
+            })
+        });
+    </script>
 </head>
 
 <body>
     <div class="mambername">
-        <h1 style="font-weight: bold;">이름(6기_Spring)</h1>
+        <h1 style="font-weight: bold;">이성수(6기_Spring)</h1>
     </div>
     <img class="image" src="이미지를 넣어주세요">
     <div class="intro1">
@@ -121,7 +128,7 @@
         </div>
     </div>
     <div class="home">
-        <h3><a href="main url 삽입예정">☜ Who is B4애프터</a></h3>
+        <h3><a href="#" id="home" target="_self">☜ Who is B4애프터</a></h3>
     </div>
 </body>
 
