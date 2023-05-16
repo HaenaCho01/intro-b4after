@@ -44,5 +44,11 @@ def guestbook_get():
     all_reply = list(db.b4after.find({},{'_id':False}))
     return jsonify({'result': all_reply})
 
+@app.route("/reply", methods=["DELETE"])
+def guestbook_delete():
+    Delreply_receive = request.form['Delreply_give']
+    db.b4after.delete_one({'reply':Delreply_receive})
+    return jsonify({'msg': '삭제 완료!'})
+
 if __name__ == '__main__':
    app.run('0.0.0.0', port=5000, debug=True)
