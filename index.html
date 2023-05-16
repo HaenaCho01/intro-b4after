@@ -28,7 +28,7 @@
             width: 100%;
             height: 250px;
 
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaKyf4%2FbtsfWVRDmoW%2FenDHU7C3kKmQrmkek5fnGK%2Fimg.png);
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/fife/APg5EOaf7R-c4w3CUDx8P8Cmq0pQGNsYW3VTAk6yNv-kdYfY7mXw7u5DcWyYTn4RxO_IEgbLJLTk7KnNIXN25dgscFzF57b1bUNS3dC26mrOxm3dpD2hwFOaoV2c6OI76TPx8MZ4WkXsYrQzmy1UV6gqltQ37a6Xb6S0IVn1miqtf9Q-0VYkoJPfH7k57MefcxYVp_-m4f4T25u2mWVqO4xZm4-D6fkHzVKqdLXRixsdGmszd8Yk4iskrXl0FomK5Arglpp7gwaQ-UPPvk-kboAGl6IHnbvrJoBuRoK-AR3KkrApLHXxuLZdaFY0GQxDtJ2XJZb_R1efEvbSCq968lBQ3AmC2F779wEFUUQWP016Gm2QIczMcQKSPG9BHtayDaczUfyEbE-iUIosKN0HBv5WXmGDRGr9VjQQV6yfris26737lu8m3gqYCCu37IRDUyU-QjonBzqn-ZJTmyjdq0gkR0fm9oBqlj-gbiAb-gX0Qbv8BEcyPemiE2sGQt41WjdLpRC4IvX2kL9ujFSgDoTdmcX7K6LqZ5WqYLbZ1Df1nnhmnPCoH2StozPS5q-br852eHUruLpt4ra-OxfgiAfVusX7dl2E2lm9DQCLmO5Lo6Vrx6xLf05TYYWVaDPPG6Atu_60sh6U_zFZZ7HkwpieLoAzblm_RYjsMnIgEfKLrUzcF65RrcUw39zq5va-hBpJIbbm4i61axm4BwuYNoNf1QBOVMVaZxKvv5JcBxNz8AcUNYViKQPV5qV2jaUChimNGlN8qT0uLIqAL4bl0uMV7ewASzZU7l0BrX_4sbxVJfjEL_lRT3RbyJ7siM_aTgIAnWaHscwVSDfto5X7S0yOf-wjLhp5tawTa6cAzFPFNlHWncr21D7uSckUKWgf7S48ck7VL2fDyUpp5B5KLjCNdn1vKVlRxFc6pw86haLZt3ooJPAUXRSQ3LWwYte4lLtsSMdeLn8vEVhvbQM1rexpD0FxPwk5VP7mEmEuDIXzcL1QfEAm4z85x8zNar_Bo4oZiC2WlMOKPGliDgxyX56C_7IlTxpmpdYsxZz5I2behvCUoDM7Oj1VeWgRxP36C0OY7xqlXY44odKxiL8VfuSMy8u5XXqEJ9KKB6NhQuN7s12Z65JcCi43I8LnmZDyG6NNb0Zq2GlVzabQAwVXs84jK0QdoAIsMo1oT52u7O8EayTiYAhDkSpbW-TYBM5gPl8nlCn_t5wvzukNIa-3uRJ4jZGPrIrXXHxyBeetLftqQbdqxMnvSVfSErt9I0zDSs05YCHcWhNTYzvIyRIE20bdWtO4b49q5lOlmy7Z6RTroB5ccKBT5_-wfbSus0PmgkzLxhZhuJJidK1cyMjoEg3yxCEt5MFuawENQ2oAdVEyZ6YGUPywxv67KF5p82eBEFYLenVXA-qZuXz9I_LbDlEdF6QfgEsDERUsrJUoNAeBs8k6nutg0RDCgatYztEw6fu_7LqciGVAiGfYHPcZkBJiH0oOK75C=w2880-h1422);
             background-position: center bottom;
             background-size: cover;
 
@@ -50,7 +50,7 @@
 
         .team-i {
             color: gray;
-            font-size: 18px;
+            font-size: 14px;
         }
 
         .name {
@@ -84,7 +84,7 @@
         }
 
         .col {
-            margin: 0px -16px 40px 0px;
+            margin: -30px -16px 40px 0px;
         }
 
         .img-s {
@@ -95,13 +95,24 @@
             margin-left: -2px;
         }
 
+        .btn-c:hover {
+            outline-color: transparent;
+            outline-style: solid;
+            box-shadow: 0 0 0 2px gray;
+            transition: 0.7s;
+        }
+
         .input {
             width: 60%;
             height: 50px;
         }
 
         .member {
-            margin-top: 100px;
+            margin-top: 120px;
+        }
+
+        .reply_list {
+            margin-top: 15px;
         }
     </style>
     <script>
@@ -246,10 +257,10 @@
             <button onclick="save_reply()" class="btn">등록</button>
             <div class="reply_list" id="reply_list">
                 <div>
-                        <li>여기에 댓글</li>
+                    <li>여기에 댓글</li>
                 </div>
                 <div>
-                        <li>여기에 댓글</li>
+                    <li>여기에 댓글</li>
                 </div>
             </div>
         </div>
