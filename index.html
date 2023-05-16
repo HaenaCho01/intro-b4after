@@ -110,6 +110,30 @@
         .member {
             margin-top: 100px;
         }
+        .delBtn {
+            background-color: transparent;
+            font-size: 10px;
+
+            width: 40px;
+
+            margin: 5px auto 5px 10px;
+
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        .delBtn:hover {
+            background-color: black;
+            color: white;
+            font-size: 10px;
+
+            width: 40px;
+
+            margin: 5px auto 5px 10px;
+
+            border: 1px solid black;
+            border-radius: 8px;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -136,7 +160,7 @@
 
             //삭제 기능
             $('#reply_list').on("click", ".delBtn", function () {
-                let Delreply = $(this).parent().text().replace('삭제', '')
+                let Delreply = $(this).parent().text().replace('delete', '')
 
 
                 let formData = new FormData()
@@ -158,7 +182,7 @@
                 rows.forEach((a) => {
                     let reply = a['reply']
 
-                    let temp_html = `<li>${reply}<button class="delBtn">삭제</button></li>`
+                    let temp_html = `<li>${reply}<button class="delBtn">delete</button></li>`
                     $('#reply_list').append(temp_html)
                 })
             })
@@ -265,10 +289,10 @@
             <button onclick="save_reply()" class="btn">등록</button>
             <div class="reply_list" id="reply_list">
                 <div>
-                    <li>여기에 댓글</li>
+                    <li>여기에 댓글<button class="delBtn">delete</button></li>
                 </div>
                 <div>
-                    <li>여기에 댓글</li>
+                    <li>여기에 댓글<button class="delBtn">delete</button></li>
                 </div>
             </div>
         </div>
