@@ -233,6 +233,7 @@
             //수정Btn(삭제 옆 수정버튼)을 누르면 input에 해당 댓글의 내용이 나오는 메서드
             $('#reply_list').on("click", ".modBtn", function () {
                 $('#modBtn').show()
+                $('#savBtn').hide()
 
                 let reply = $("span.reply", $(this).parent()).text();
 
@@ -385,7 +386,7 @@
             <h2 class="team-n">응원 댓글</h2>
             <br>
             <input class="input" id="reply" placeholder="응원의 한마디!" style="float:left">
-            <button onclick="save_reply()" class="btn">등록</button>
+            <button onclick="save_reply()" class="btn" id="savBtn">등록</button>
             <button onclick="modify_reply()" class="btn" id="modBtn">수정</button>
             <div class="reply_list" id="reply_list">
                 <div>
