@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>B4애프터 member</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+        * {
+            font-family: 'Gowun Batang', serif;
+        }
+
+        .mambername {
+            width: 100%;
+            height: 50px;
+
+            background-position: center;
+            background-size: cover;
+
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+
+            margin-left:10px;
+            padding: 50px;
+        }
+
+        .image {
+            width: 50%;
+            height: 400px;
+            float: left;
+            margin: 20px auto 50px auto;
+            padding: 20px 50px 20px 50px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .intro1 {
+            width: auto;
+            height: 400px;
+            margin: 20px auto 50px auto;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .intro2 {
+            width: auto;
+            height: 300px;
+            margin: 10px auto 10px auto;
+            padding: 10px 100px 50px 100px;
+        }
+
+        .introtext {
+            font-size: 25px;
+        }
+
+        .home {
+            color: gray;
+            text-align: right;
+            margin: 10px 50px auto auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#home').click(function () {
+                window.location.href='/'
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mambername">
+        <h1 style="font-weight: bold;">박서연(6기_Spring)</h1>
+    </div>
+    <img class="image" src="https://i.pinimg.com/736x/5b/33/d6/5b33d6a105bcdd4b9829f604132c691e.jpg">
+    <div class="intro1">
+        <h2 style="font-weight: bold;">나의 소개</h2>
+        <br>
+        <div class="introtext">
+            <li>
+                MBTI - INTP
+            </li>
+            <br>
+            <li>
+                블로그 - <a href = "https://seoyeons.tistory.com/">https://seoyeons.tistory.com/ </a>
+            </li>
+            <br>
+            <li>
+                이해가 느리지만 조금씩 알아가는 재미가 있습니다 ! 
+            </li>
+        </div>
+    </div>
+    <div class="intro2">
+        <h2 style="font-weight: bold;">나에 대한 정보</h2>
+        <br>
+        <div class="introtext">
+            <li>
+                나의 취미 - 사진찍기를 좋아합니다
+            </li>
+            <br>
+            <li>
+                협업스타일 - 서로 소통하면서 나아가는 것을 좋아합니다
+            </li>
+            <br>
+            <li>
+                나의 장점 - 새로운 것에 거부감이 없고 도전을 두려워하지 않습니다
+            </li>
+        </div>
+    </div>
+    <div class="home">
+        <h3><a href="#" id="home" target="_self">🏠</a>👈click!</h3>
+    </div>
+</body>
+
+</html>

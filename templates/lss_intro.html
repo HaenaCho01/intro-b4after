@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>B4애프터 Sungsoo page</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+        * {
+            font-family: 'Gowun Batang', serif;
+        }
+
+        .mambername {
+
+            width: 100%;
+            height: 100%;
+
+            background-position: center;
+            background-size: cover;
+
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+
+            text-align: center;
+            
+            margin-left: 10px;
+            padding: 50px;
+        }
+
+        .image {
+            
+            width: 50%;
+            height: 600px;
+            float: left;
+            margin: 20px auto 50px auto;
+            padding: 20px 50px 20px 50px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .intro1 {
+            width: auto;
+            height: 600px;
+            margin: 20px auto 50px auto;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .intro2 {
+            
+            width: 100%;
+            height: 350px;
+            margin: 20px auto 50px auto;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .introtext {
+            font-size: 25px;
+        }
+
+        .home {
+            color: gray;
+            text-align: right;
+            margin: 50px 50px 50px auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#home').click(function () {
+                window.location.href = '/'
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mambername">
+        <h1 style="font-weight: bold;">이성수(6기_Spring)</h1>
+    </div>
+    <img class="image" src="https://i.postimg.cc/d0N17Xb7/lss.jpg">
+    <div class="intro1">
+        <h2 style="font-weight: bold;">나의 소개</h2>
+        <br>
+        <div class="introtext">
+            <li>
+                MBTI : INFJ
+            </li>
+            <br>
+            <li>
+                블로그 : <a href="https://velog.io/@lss6181" target="_blank">https://velog.io/@lss6181</a>
+            </li>
+            <br>
+            <li>
+                한마디 : 안녕하세요! 유능한 프리랜서 개발자가 최종목표인 이성수 입니다!
+            </li>
+            <br>
+            <li>
+                장점 : 배려하는 마음을 지니려 노력합니다!
+            </li>
+            <br>
+            <li>
+                협업스타일 : 배움의 자세로 겸손을 잃지 않도록 하며, 맡은 바 책임을 다합니다!
+            </li>
+        </div>
+    </div>
+    <div class="intro2">
+        <h2 style="font-weight: bold;">TMI</h2>
+        <br>
+        <div class="introtext">
+            <li>
+                좋아하는 것 : 맛있는거 먹기, 음악 듣기, 탈것 종류들(차, 모터사이클, ebike)
+            </li>
+            <br>
+            <li>
+                꾸준히 운동하려 노력해요! go to the gym!
+            </li>
+            <br>
+            <li>
+                논알코올 라이프를 살고있어요! (술찌 입니다ㅎ,,)
+            </li>
+        </div>
+    </div>
+    <div class="home">
+        <h3><a href="#" id="home" target="_self">🏠</a>👈click!</h3>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>B4애프터 member</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+        * {
+            font-family: 'Gowun Batang', serif;
+        }
+
+        .mambername {
+            width: 100%;
+            height: 50px;
+
+            background-position: center;
+            background-size: cover;
+
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+
+            margin-left:10px;
+            padding: 50px;
+        }
+
+        .image {
+            width: 50%;
+            height: 600px;
+            float: left;
+            margin: 20px auto 50px auto;
+            padding: 20px 50px 20px 50px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .intro1 {
+            width: auto;
+            height: 600px;
+            margin: 20px auto 50px auto;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .intro2 {
+            width: auto;
+            height: 350px;
+            margin: 20px auto 50px auto;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .introtext {
+            font-size: 20px;
+        }
+
+        .home {
+            color: gray;
+            text-align: right;
+            margin: 50px 50px 50px auto;
+        }
+    </style>
+
+<script>
+    $(document).ready(function () {
+
+        $('#home').click(function () {
+            window.location.href='/'
+        })
+    });
+</script>
+
+</head>
+
+<body>
+    <div class="mambername">
+        <h1 style="font-weight: bold;">김보영(6기_spring)</h1>
+    </div>
+    <img class="image" src="https://drive.google.com/uc?id=106PDalyvfFBUsOvXHGW_NP1fV9kuKPWD">
+    <div class="intro1">
+        <h2 style="font-weight: bold;">▶나의 소개◀</h2>
+        <br>
+        <div class="introtext">
+
+           <dl>
+            <dt>#MBTI</dt>
+                 <dd>ISTP : 백과사전형 냉철한 실용주의자라곤 하지만 꽤 따뜻하고 공감능력이 좋답니다</dd>
+                 <dt>#나를 행복하게 하는 것</dt>
+                 <dd>1. 고양이랑 놀기</dd>
+                 <dd>2. 카페에서 혼자 책읽기</dd>
+                 <dd>3. 헤드셋에 음악 크게 틀어놓고 산책하기</dd>
+                 <dd>4. 대형마트,다이소 구경하기</dd>
+                 <dd>5. 좋아하는 과자 왕창 사서 ott보면서 먹기</dd>
+                 <dt>#블로그</dt>
+                 <dd><a href="https://xiahni.tistory.com" target="_blank">https://xiahni.tistory.com</a></dd>
+                 <dt>#앞으로의 각오</dt>
+                 <dd>못하는 나 자신을 견디자 ! 아자자 !</dd>
+           </dl>
+
+        </div>
+    </div>
+    <div class="intro2">
+ 
+        <div class="introtext">
+       <dl>
+        <dt>#객관적으로 살펴본 자신의 장점</dt>
+        <dd>1. 너그럽고 배려심 있다</dd>
+        <dd>2. 객관적이다</dd>
+        <dd>3. 자신의 생각이 확실하다</dd>
+        <dt>#자신의 협업 스타일</dt>
+        <dd> 내가 부족하면 따라잡기 위해 남들보다 몇 배 열심히 하고, 
+            앞서 나가고 있다면 잠시 멈춰서 도와줌으로써 같이 으쌰 으쌰 도와가면서 협업하고 싶습니다</dd>
+        <dt>#나는 이런 개발자가 되고싶다</dt>
+        <dd>1. 집요한 개발자</dd>
+        <dd>2. 호기심 많은 개발자</dd>
+        <dd>3. 진취적인 개발자</dd>
+        <dd>4. 끊임없이 공부하는 개발자</dd>
+       </dl>
+        </div>
+    </div>
+    <div class="home">
+         <h3><a href="#" id="home" target="_self">🏠</a>👈click!</h3>
+    </div>
+</body>
+
+</html>
