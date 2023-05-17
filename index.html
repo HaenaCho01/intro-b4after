@@ -75,7 +75,7 @@
             font-size: 16px;
         }
 
-        .reply {
+        .reply_a {
             width: 50%;
             height: auto;
             float: left;
@@ -154,6 +154,31 @@
             border-radius: 8px;
         }
 
+        .modBtn {
+            background-color: transparent;
+            font-size: 10px;
+
+            width: 40px;
+
+            margin: 5px auto 5px 10px;
+
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        .modBtn:hover {
+            background-color: black;
+            color: white;
+            font-size: 10px;
+
+            width: 40px;
+
+            margin: 5px auto 5px 10px;
+
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
         .reply_list {
             margin-top: 15px;
         }
@@ -161,30 +186,31 @@
     <script>
         $(document).ready(function () {
             show_msg()
+            
             $('#lssbutton').click(function () {
-                window.location.href = '/lsspage'
+                window.location.href = '/teams/members/seongsu'
             })
 
             $('#kbybutton').click(function () {
-                window.location.href = '/kbypage'
+                window.location.href = '/teams/members/boyoung'
             })
 
             $('#chnbutton').click(function () {
-                window.location.href = '/chnpage'
+                window.location.href = '/teams/members/haena'
             })
 
             $('#psybutton').click(function () {
-                window.location.href = '/psypage'
+                window.location.href = '/teams/members/seoyeon'
             })
 
             $('#jhjbutton').click(function () {
-                window.location.href = '/jhjpage'
+                window.location.href = '/teams/members/hojin'
             })
+
 
             //삭제 기능
             $('#reply_list').on("click", ".delBtn", function () {
-                let Delreply = $(this).parent().text().replace('delete', '')
-
+                let Delreply = $("span.reply", $(this).parent()).text();
 
                 let formData = new FormData()
                 formData.append("Delreply_give", Delreply)
@@ -196,6 +222,14 @@
 
             })
 
+            //수정Btn(삭제 옆 수정버튼)을 누르면 input에 해당 댓글의 내용이 나오는 메서드
+            $('#reply_list').on("click", ".modBtn", function () {
+                let reply = $("span.reply", $(this).parent()).text();
+
+                $('#reply').val(reply)
+                $('#modBtn').attr("reply", reply);
+            })
+
         })
 
         function show_msg() {
@@ -205,7 +239,9 @@
                 rows.forEach((a) => {
                     let reply = a['reply']
 
-                    let temp_html = `<li>${reply}<button class="delBtn">delete</button></li>`
+                    let temp_html = `<li><span class="reply">${reply}</span> 
+                                        <button class="modBtn">수정</button>
+                                        <button class="delBtn">delete</button></li>`
                     $('#reply_list').append(temp_html)
                 })
             })
@@ -229,6 +265,30 @@
                  window.location.reload()
             });
         }
+
+                //수정 메서드
+                function modify_reply() {
+                    let reply = $('#modBtn').attr("reply")
+                    let Modreply = $('#reply').val()
+
+                    if (Modreply.trim() == '') {
+                        alert("댓글을 입력해주세요!");
+                        $('#reply').focus();
+                        return;
+                    }
+
+                    let formData = new FormData()
+                    formData.append("Modreply_give", Modreply)
+                    formData.append("reply_give", reply)
+
+
+                    fetch('/reply', { method: "PUT", body: formData, }).then((response) => response.json()).then((data) => {
+                        alert(data["msg"])
+                        window.location.reload()
+                    });
+                }
+
+
     </script>
 </head>
 
@@ -310,17 +370,18 @@
                 </div>
             </div>
         </div>
-        <div class="reply">
+        <div class="reply_a">
             <h2 class="team-n">응원 댓글</h2>
             <br>
             <input class="input" id="reply" placeholder="응원의 한마디!" style="float:left">
             <button onclick="save_reply()" class="btn">등록</button>
+            <button onclick="modify_reply()" class="btn" id="modBtn">수정</button>
             <div class="reply_list" id="reply_list">
                 <div>
-                    <li>여기에 댓글<button class="delBtn">delete</button></li>
+                    <li>여기에 댓글<button class="modBtn">수정</button><button class="delBtn">delete</button></li>
                 </div>
                 <div>
-                    <li>여기에 댓글<button class="delBtn">delete</button></li>
+                    <li>여기에 댓글<button class="modBtn">수정</button><button class="delBtn">delete</button></li>
                 </div>
             </div>
         </div>
