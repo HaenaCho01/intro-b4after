@@ -75,7 +75,7 @@
             font-size: 16px;
         }
 
-        .reply {
+        .reply_a {
             width: 50%;
             height: auto;
             float: left;
@@ -154,6 +154,31 @@
             border-radius: 8px;
         }
 
+        .modBtn {
+            background-color: transparent;
+            font-size: 10px;
+
+            width: 40px;
+
+            margin: 5px auto 5px 10px;
+
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        .modBtn:hover {
+            background-color: black;
+            color: white;
+            font-size: 10px;
+
+            width: 40px;
+
+            margin: 5px auto 5px 10px;
+
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
         .reply_list {
             margin-top: 15px;
         }
@@ -161,6 +186,9 @@
     <script>
         $(document).ready(function () {
             show_msg()
+
+            $('#modBtn').css("display","none");
+
             
             $('#lssbutton').click(function () {
                 window.location.href = '/teams/members/seongsu'
@@ -171,7 +199,7 @@
             })
 
             $('#chnbutton').click(function () {
-                window.location.href = '/teams/members/hojin'
+                window.location.href = '/teams/members/haena'
             })
 
             $('#psybutton').click(function () {
@@ -179,7 +207,7 @@
             })
 
             $('#jhjbutton').click(function () {
-                window.location.href = '/teams/members/haena'
+                window.location.href = '/teams/members/hojin'
             })
 
 
@@ -199,6 +227,8 @@
 
             //수정Btn(삭제 옆 수정버튼)을 누르면 input에 해당 댓글의 내용이 나오는 메서드
             $('#reply_list').on("click", ".modBtn", function () {
+                $('#modBtn').show()
+
                 let reply = $("span.reply", $(this).parent()).text();
 
                 $('#reply').val(reply)
@@ -345,7 +375,7 @@
                 </div>
             </div>
         </div>
-        <div class="reply">
+        <div class="reply_a">
             <h2 class="team-n">응원 댓글</h2>
             <br>
             <input class="input" id="reply" placeholder="응원의 한마디!" style="float:left">
@@ -353,10 +383,10 @@
             <button onclick="modify_reply()" class="btn" id="modBtn">수정</button>
             <div class="reply_list" id="reply_list">
                 <div>
-                    <li>여기에 댓글<button class="delBtn">delete</button></li>
+                    <li>여기에 댓글<button class="modBtn">수정</button><button class="delBtn">delete</button></li>
                 </div>
                 <div>
-                    <li>여기에 댓글<button class="delBtn">delete</button></li>
+                    <li>여기에 댓글<button class="modBtn">수정</button><button class="delBtn">delete</button></li>
                 </div>
             </div>
         </div>
