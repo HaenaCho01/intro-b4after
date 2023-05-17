@@ -193,6 +193,8 @@
         $(document).ready(function () {
             show_msg()
 
+            $('#modBtn').css("display","none");
+
             $('#lssbutton').click(function () {
                 window.location.href = '/teams/members/seongsu'
             })
@@ -230,6 +232,8 @@
 
             //수정Btn(삭제 옆 수정버튼)을 누르면 input에 해당 댓글의 내용이 나오는 메서드
             $('#reply_list').on("click", ".modBtn", function () {
+                $('#modBtn').show()
+
                 let reply = $("span.reply", $(this).parent()).text();
 
                 $('#reply').val(reply)
