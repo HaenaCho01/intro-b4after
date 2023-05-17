@@ -9,23 +9,23 @@ db = client.dbsparta
 def home():
    return render_template('index.html')
 
-@app.route('/lsspage')
+@app.route('/teams/members/seongsu')
 def lsspage():
     return render_template('lss_intro.html')
 
-@app.route('/kbypage')
+@app.route('/teams/members/boyoung')
 def kbypage():
     return render_template('kby_intro.html')
 
-@app.route('/chnpage')
+@app.route('/teams/members/haena')
 def chnpage():
     return render_template('chn_intro.html')
 
-@app.route('/psypage')
+@app.route('/teams/members/seoyeon')
 def psypage():
     return render_template('psy_intro.html')
 
-@app.route('/jhjpage')
+@app.route('/teams/members/hojin')
 def jhjpage():
     return render_template('jhj_intro.html')
 
@@ -49,6 +49,13 @@ def guestbook_delete():
     Delreply_receive = request.form['Delreply_give']
     db.b4after.delete_one({'reply':Delreply_receive})
     return jsonify({'msg': '삭제 완료!'})
+   
+@app.route("/reply", methods=["PUT"])
+def guestbook_put():
+    Modreply_receive = request.form['Modreply_give']
+    reply_receive = request.form['reply_give']    
+    db.b4after.update_one({'reply':reply_receive},{'$set':{'reply':Modreply_receive}})
+    return jsonify({'msg': '수정 완료!'})
 
 if __name__ == '__main__':
    app.run('0.0.0.0', port=5000, debug=True)
