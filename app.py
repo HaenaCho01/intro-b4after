@@ -46,6 +46,7 @@ def guestbook_post():
 @app.route("/reply", methods=["GET"])
 def guestbook_get():
     all_reply = list(db.b4after.find({},{'_id':False}))
+    all_reply.reverse()
     return jsonify({'result': all_reply})
 
 @app.route("/reply", methods=["DELETE"])
