@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIvgA8%2FbtsgniRBCgy%2FfYm8gSQPSaPSBuMPC9yPJk%2Fimg.png">
+    <title>B4애프터 Haena page</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+        * {
+            font-family: 'Gowun Batang', serif;
+        }
+
+        .mambername {
+            width: 100%;
+            height: 50px;
+
+            background-position: center;
+            background-size: cover;
+
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+
+            margin-left:10px;
+            padding: 50px;
+        }
+
+        .image {
+            width: 50%;
+            height: 400px;
+            float: left;
+            margin: 20px auto 30px auto;
+            padding: 20px 50px 20px 50px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .intro1 {
+            width: auto;
+            height: 400px;
+            margin: 20px auto 30px auto;
+            padding: 50px 100px 50px 100px;
+        }
+
+        .intro2 {
+            width: auto;
+            height: 300px;
+            margin: 10px auto 10px auto;
+            padding: 5px 100px 50px 100px;
+        }
+
+        .introtext {
+            font-size: 25px;
+        }
+
+        .home {
+            color: gray;
+            text-align: right;
+            margin: 10px 50px auto auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#home').click(function () {
+                window.location.href='/'
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="mambername">
+        <h1 style="font-weight: bold;">조해나(6기_Spring)</h1>
+    </div>
+    <img class="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Ft35mX%2FbtsgezldkYP%2F4KvR46kg6csqSSKKhBW9ak%2Fimg.jpg">
+    <div class="intro1">
+        <h2 style="font-weight: bold;">나의 소개</h2>
+        <br>
+        <div class="introtext">
+            <li>
+                MBTI: ISFP
+            </li>
+            <br>
+            <li>
+                블로그: <a href="https://ellarangi.tistory.com/" target="_blank">https://ellarangi.tistory.com/</a>
+            </li>
+            <br>
+            <li>
+                "아직 많이 부족하지만 열심히 공부하여 좋은 개발자로 성장하고 싶습니다!🙂"
+            </li>
+        </div>
+    </div>
+    <div class="intro2">
+        <h2 style="font-weight: bold;">저는 이런 사람이에요!</h2>
+        <br>
+        <div class="introtext">
+            <li>
+                장점: 끈기가 있어 호기심이 생기면 끝까지 파고듭니다. 다른 사람의 이야기를 잘 들어줍니다.
+            </li>
+            <br>
+            <li>
+                협업스타일: 여러 사람의 의견을 모두 들어본 후 취합하여 의견 조율을 진행합니다.
+            </li>
+            <br>
+            <li>
+                취미: # 키보드연주 # 음악감상 # 드라마보기
+            </li>
+        </div>
+    </div>
+    <div class="home">
+        <h3><a href="#" id="home" target="_self">🏠</a>👈click!</h3>
+    </div>
+</body>
+
+</html>
